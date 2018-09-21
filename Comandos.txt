@@ -1,3 +1,5 @@
+https://fede-gestor-evaluaciones.herokuapp.com/users/sign_in  
+https://git-scm.com/downloads
 $ git config --global user.name "Nikolay Cardenas"
 $ git config --global user.email nikolay37@hotmail.com
 $ git config --list
