@@ -1,0 +1,9 @@
+$ git config --global user.name "Nikolay Cardenas"
+$ git config --global user.email nikolay37@hotmail.com
+$ git config --list
+$ git clone  https://github.com/nikolay37/Reciclapp.git
+$ git status
+$ git add . -h
+$ git commit -m "archivo de prueba eliminado"
+$ git remote -v
+$ git push origin master
