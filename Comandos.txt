@@ -1,11 +1,23 @@
 https://fede-gestor-evaluaciones.herokuapp.com/users/sign_in  
 https://git-scm.com/downloads
-$ git config --global user.name "Nikolay Cardenas"
-$ git config --global user.email nikolay37@hotmail.com
-$ git config --list
-$ git clone  https://github.com/nikolay37/Reciclapp.git
-$ git status
-$ git add . -h
-$ git commit -m "archivo de prueba eliminado"
-$ git remote -v
-$ git push origin master
+git config --global user.name "Nikolay Cardenas"
+git config --global user.email nikolay37@hotmail.com
+git config --list
+git clone  https://github.com/nikolay37/Reciclapp.git
+git status
+git add . -h
+git commit -m "archivo de prueba eliminado"
+git remote -v
+git push origin master
+
+crear ramas
+
+ionic
+npm install -g ionic cordova
+npm install -g ionic
+ionic login
+ionic start myApp tabs
+ionic start myApp blank
+ionic start myApp sidemenu
+cd myApp 
+ionic serve
