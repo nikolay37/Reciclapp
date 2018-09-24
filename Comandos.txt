@@ -10,7 +10,7 @@ git commit -m "archivo de prueba eliminado"
 git remote -v
 git push origin master
 
-crear ramas
+git checkout -b nueva_rama
 
 ionic
 npm install -g ionic cordova
