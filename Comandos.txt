@@ -11,6 +11,18 @@ git remote -v
 git push origin master
 
 git checkout -b nueva_rama
+git branch
+
+Clonar el sitio de fedesot a local
+
+git branch -a
+git merge remotes/origin/develop1
+git checkout remotes/origin/develop1
+git branch
+git checkout -b develop2
+git branch -D develop1
+git branch
+git checkout -b develop1
 
 ionic
 npm install -g ionic cordova
