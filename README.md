@@ -13,3 +13,10 @@ pensando que es un lugar para deshacerse de los sobrantes de las actividades dia
 La problemática de la comunidad se origina en la mala disposición de residuos sólidos que alimenta la contaminación ambiental de
 los santuarios naturales del territorio. Pocas personas aprecian el vivir tan cerca de espacios naturales únicos y no sienten interés
 por el cuidado de los mismos.
+
+## Integrantes
+Nikolay Cardenas   ||      Andres Moreno    ||    Diego Mena    ||    Natalia Ortiz     ||      Julian Restrepo
+
+
+
+
