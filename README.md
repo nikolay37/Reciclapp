@@ -17,6 +17,10 @@ por el cuidado de los mismos.
 ## Integrantes
 Nikolay Cardenas   ||      Andres Moreno    ||    Diego Mena    ||    Natalia Ortiz     ||      Julian Restrepo
 
+## Solucion 
+Generar una aplicacion que le permita a la comunidad interactuar y contribuir con el medio ambiente, por medio de retos o campañas de reciclaje. La idea es que la aplicacion permita retar a diferentes actores como por ejemplo barrios, juntas de accion comunal entre otros, teniendo como referente la forma correcta de reciclar.
+
+
 
 
 
