@@ -37,7 +37,9 @@ rails server
 probar localhost:3000
 
 rails generate controller Welcome index
-
+rails generate model Article title:string text:text
+rails db:migrate
+rails routes is:
 
 
 comandos pruebas.
