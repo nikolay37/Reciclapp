@@ -1,5 +1,9 @@
 https://fede-gestor-evaluaciones.herokuapp.com/users/sign_in  
 https://git-scm.com/downloads
+https://repl.it/repls/UnawareSecondaryDaemons   ->ruby online
+https://rubyinstaller.org/downloads/
+
+
 git config --global user.name "Nikolay Cardenas"
 git config --global user.email nikolay37@hotmail.com
 git config --list
@@ -10,7 +14,39 @@ git commit -m "archivo de prueba eliminado"
 git remote -v
 git push origin master
 
-crear ramas
+git checkout -b nueva_rama
+git branch
+
+Clonar el sitio de fedesot a local
+
+git branch -a
+git merge remotes/origin/develop1
+git checkout remotes/origin/develop1
+git branch
+git checkout -b develop2
+git branch -D develop1
+git branch
+git checkout -b develop1
+
+
+gem install rails
+rails --version
+rails new blog
+pasarse al directorio blog
+rails server
+probar localhost:3000
+
+rails generate controller Welcome index
+rails generate model Article title:string text:text
+rails db:migrate
+rails routes is:
+
+
+comandos pruebas.
+gem update --system 2.3.0   -> para solucionar error
+gem install bundler   -> esto para solucionar el rails -server
+gem update rails
+gem update --system
 
 ionic
 npm install -g ionic cordova
