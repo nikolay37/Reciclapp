@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idventas: 1
+  idpuntoecologico: 1
+  iddetalleparametro: 1
+  fechaventa: 2018-10-10 16:18:03
+  cantidad: 1
+  valor: 1
+  donacion: MyString
+
+two:
+  idventas: 1
+  idpuntoecologico: 1
+  iddetalleparametro: 1
+  fechaventa: 2018-10-10 16:18:03
+  cantidad: 1
+  valor: 1
+  donacion: MyString

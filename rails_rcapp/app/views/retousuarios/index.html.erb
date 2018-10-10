@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Retousuarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idreto</th>
+      <th>Idusu invitado</th>
+      <th>Lema</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @retousuarios.each do |retousuario| %>
+      <tr>
+        <td><%= retousuario.idreto %></td>
+        <td><%= retousuario.idusu_invitado %></td>
+        <td><%= retousuario.lema %></td>
+        <td><%= link_to 'Show', retousuario %></td>
+        <td><%= link_to 'Edit', edit_retousuario_path(retousuario) %></td>
+        <td><%= link_to 'Destroy', retousuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Retousuario', new_retousuario_path %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Idreto: 1
+  idusuario_origina: 1
+  nombre: MyString
+
+two:
+  Idreto: 1
+  idusuario_origina: 1
+  nombre: MyString

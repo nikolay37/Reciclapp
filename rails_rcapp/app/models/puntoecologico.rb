@@ -1,0 +1,2 @@
+class Puntoecologico < ApplicationRecord
+end

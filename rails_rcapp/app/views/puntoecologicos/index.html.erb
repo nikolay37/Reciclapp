@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Puntoecologicos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idpuntoecologico</th>
+      <th>Ubicacionx</th>
+      <th>Ubicaciony</th>
+      <th>Nombre</th>
+      <th>Idresponsable</th>
+      <th>Fechainicio</th>
+      <th>Fechacierre</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @puntoecologicos.each do |puntoecologico| %>
+      <tr>
+        <td><%= puntoecologico.idpuntoecologico %></td>
+        <td><%= puntoecologico.Ubicacionx %></td>
+        <td><%= puntoecologico.Ubicaciony %></td>
+        <td><%= puntoecologico.Nombre %></td>
+        <td><%= puntoecologico.idresponsable %></td>
+        <td><%= puntoecologico.Fechainicio %></td>
+        <td><%= puntoecologico.Fechacierre %></td>
+        <td><%= link_to 'Show', puntoecologico %></td>
+        <td><%= link_to 'Edit', edit_puntoecologico_path(puntoecologico) %></td>
+        <td><%= link_to 'Destroy', puntoecologico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Puntoecologico', new_puntoecologico_path %>

@@ -1,0 +1,52 @@
+<%= form_with(model: puntoecologico, local: true) do |form| %>
+  <% if puntoecologico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(puntoecologico.errors.count, "error") %> prohibited this puntoecologico from being saved:</h2>
+
+      <ul>
+      <% puntoecologico.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idpuntoecologico %>
+    <%= form.number_field :idpuntoecologico %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ubicacionx %>
+    <%= form.text_field :Ubicacionx %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ubicaciony %>
+    <%= form.text_field :Ubicaciony %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Nombre %>
+    <%= form.text_field :Nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idresponsable %>
+    <%= form.number_field :idresponsable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fechainicio %>
+    <%= form.datetime_select :Fechainicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fechacierre %>
+    <%= form.datetime_select :Fechacierre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

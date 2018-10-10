@@ -48,6 +48,73 @@ gem install bundler   -> esto para solucionar el rails -server
 gem update rails
 gem update --system
 
+
+# Verificar versión ruby
+ruby -v
+
+# Instalar Rails
+gem install rails 
+
+# verificar version rails
+rails --version 
+
+# Creando una nueva applicación
+rails new blog
+
+# Inicializando Rails
+rails s 
+
+# Crear un controlador
+rails generate controller welcome index
+
+# Verificar rutas
+bin/rake routes 
+	
+# error de pid
+Finalizar proceso ruby 
+
+# conexion posgresql
+# cuando no tenga creado el proyecto
+gem install pg 
+
+---
+
+# si ya esta instalado el proyecto
+# editar gemfile y agregar
+gem 'pg'
+
+# depues de instalada 
+bundle update 
+
+# configurar config/database.yml
+
+development:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: postgres
+  password: ''
+  database: curso_postgresql
+
+# comando scaffold 
+rails generate scaffold User name:string email:string
+
+# Correr migraciones 
+rake db:migrate
+
+---
+
+# root routes rails
+root :to => "pages#show"
+
+--- 
+# Relaciones en rails 
+rails g scaffold list name
+rails g scaffold task name list:references
+
+
 ionic
 npm install -g ionic cordova
 npm install -g ionic

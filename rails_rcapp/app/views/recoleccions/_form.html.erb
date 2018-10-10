@@ -1,0 +1,62 @@
+<%= form_with(model: recoleccion, local: true) do |form| %>
+  <% if recoleccion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(recoleccion.errors.count, "error") %> prohibited this recoleccion from being saved:</h2>
+
+      <ul>
+      <% recoleccion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idrecoleccion %>
+    <%= form.number_field :idrecoleccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Idretousuario %>
+    <%= form.number_field :Idretousuario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idusu_invitado %>
+    <%= form.number_field :idusu_invitado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iddetalleparametro %>
+    <%= form.number_field :iddetalleparametro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idredencion %>
+    <%= form.number_field :idredencion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idpuntorecoleccion %>
+    <%= form.number_field :idpuntorecoleccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Estado %>
+    <%= form.text_field :Estado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Fecha %>
+    <%= form.datetime_select :Fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cantidad %>
+    <%= form.number_field :Cantidad %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

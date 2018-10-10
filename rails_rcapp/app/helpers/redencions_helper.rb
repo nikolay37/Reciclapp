@@ -1,0 +1,2 @@
+module RedencionsHelper
+end

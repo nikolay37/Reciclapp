@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idpuntoecologico: 1
+  Ubicacionx: 9.99
+  Ubicaciony: 9.99
+  Nombre: MyString
+  idresponsable: 1
+  Fechainicio: 2018-10-10 16:16:30
+  Fechacierre: 2018-10-10 16:16:30
+
+two:
+  idpuntoecologico: 1
+  Ubicacionx: 9.99
+  Ubicaciony: 9.99
+  Nombre: MyString
+  idresponsable: 1
+  Fechainicio: 2018-10-10 16:16:30
+  Fechacierre: 2018-10-10 16:16:30

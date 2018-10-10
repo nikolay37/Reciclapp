@@ -1,0 +1,2 @@
+class Redencion < ApplicationRecord
+end

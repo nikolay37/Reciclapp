@@ -1,0 +1,2 @@
+class Detalleparametro < ApplicationRecord
+end

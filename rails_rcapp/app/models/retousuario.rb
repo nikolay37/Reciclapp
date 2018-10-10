@@ -1,0 +1,2 @@
+class Retousuario < ApplicationRecord
+end

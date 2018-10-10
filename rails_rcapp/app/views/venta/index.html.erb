@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Venta</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idventas</th>
+      <th>Idpuntoecologico</th>
+      <th>Iddetalleparametro</th>
+      <th>Fechaventa</th>
+      <th>Cantidad</th>
+      <th>Valor</th>
+      <th>Donacion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @venta.each do |ventum| %>
+      <tr>
+        <td><%= ventum.idventas %></td>
+        <td><%= ventum.idpuntoecologico %></td>
+        <td><%= ventum.iddetalleparametro %></td>
+        <td><%= ventum.fechaventa %></td>
+        <td><%= ventum.cantidad %></td>
+        <td><%= ventum.valor %></td>
+        <td><%= ventum.donacion %></td>
+        <td><%= link_to 'Show', ventum %></td>
+        <td><%= link_to 'Edit', edit_ventum_path(ventum) %></td>
+        <td><%= link_to 'Destroy', ventum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ventum', new_ventum_path %>

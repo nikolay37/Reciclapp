@@ -1,0 +1,32 @@
+<%= form_with(model: reto, local: true) do |form| %>
+  <% if reto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(reto.errors.count, "error") %> prohibited this reto from being saved:</h2>
+
+      <ul>
+      <% reto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Idreto %>
+    <%= form.number_field :Idreto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idusuario_origina %>
+    <%= form.number_field :idusuario_origina %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

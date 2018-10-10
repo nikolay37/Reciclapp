@@ -1,0 +1,32 @@
+<%= form_with(model: retousuario, local: true) do |form| %>
+  <% if retousuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(retousuario.errors.count, "error") %> prohibited this retousuario from being saved:</h2>
+
+      <ul>
+      <% retousuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :idreto %>
+    <%= form.number_field :idreto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idusu_invitado %>
+    <%= form.number_field :idusu_invitado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lema %>
+    <%= form.number_field :lema %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
