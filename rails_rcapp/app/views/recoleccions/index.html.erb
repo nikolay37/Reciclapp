@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Idrecoleccion</th>
       <th>Idretousuario</th>
       <th>Idusu invitado</th>
       <th>Iddetalleparametro</th>
@@ -21,15 +20,14 @@
   <tbody>
     <% @recoleccions.each do |recoleccion| %>
       <tr>
-        <td><%= recoleccion.idrecoleccion %></td>
         <td><%= recoleccion.Idretousuario %></td>
         <td><%= recoleccion.idusu_invitado %></td>
         <td><%= recoleccion.iddetalleparametro %></td>
         <td><%= recoleccion.idredencion %></td>
         <td><%= recoleccion.idpuntorecoleccion %></td>
-        <td><%= recoleccion.Estado %></td>
-        <td><%= recoleccion.Fecha %></td>
-        <td><%= recoleccion.Cantidad %></td>
+        <td><%= recoleccion.estado %></td>
+        <td><%= recoleccion.fecha %></td>
+        <td><%= recoleccion.cantidad %></td>
         <td><%= link_to 'Show', recoleccion %></td>
         <td><%= link_to 'Edit', edit_recoleccion_path(recoleccion) %></td>
         <td><%= link_to 'Destroy', recoleccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>

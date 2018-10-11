@@ -14,13 +14,12 @@ class PuntoecologicosTest < ApplicationSystemTestCase
     visit puntoecologicos_url
     click_on "New Puntoecologico"
 
-    fill_in "Fechacierre", with: @puntoecologico.Fechacierre
-    fill_in "Fechainicio", with: @puntoecologico.Fechainicio
-    fill_in "Nombre", with: @puntoecologico.Nombre
-    fill_in "Ubicacionx", with: @puntoecologico.Ubicacionx
-    fill_in "Ubicaciony", with: @puntoecologico.Ubicaciony
-    fill_in "Idpuntoecologico", with: @puntoecologico.idpuntoecologico
+    fill_in "Fechacierre", with: @puntoecologico.fechacierre
+    fill_in "Fechainicio", with: @puntoecologico.fechainicio
     fill_in "Idresponsable", with: @puntoecologico.idresponsable
+    fill_in "Nombre", with: @puntoecologico.nombre
+    fill_in "Ubicacionx", with: @puntoecologico.ubicacionx
+    fill_in "Ubicaciony", with: @puntoecologico.ubicaciony
     click_on "Create Puntoecologico"
 
     assert_text "Puntoecologico was successfully created"
@@ -31,13 +30,12 @@ class PuntoecologicosTest < ApplicationSystemTestCase
     visit puntoecologicos_url
     click_on "Edit", match: :first
 
-    fill_in "Fechacierre", with: @puntoecologico.Fechacierre
-    fill_in "Fechainicio", with: @puntoecologico.Fechainicio
-    fill_in "Nombre", with: @puntoecologico.Nombre
-    fill_in "Ubicacionx", with: @puntoecologico.Ubicacionx
-    fill_in "Ubicaciony", with: @puntoecologico.Ubicaciony
-    fill_in "Idpuntoecologico", with: @puntoecologico.idpuntoecologico
+    fill_in "Fechacierre", with: @puntoecologico.fechacierre
+    fill_in "Fechainicio", with: @puntoecologico.fechainicio
     fill_in "Idresponsable", with: @puntoecologico.idresponsable
+    fill_in "Nombre", with: @puntoecologico.nombre
+    fill_in "Ubicacionx", with: @puntoecologico.ubicacionx
+    fill_in "Ubicaciony", with: @puntoecologico.ubicaciony
     click_on "Update Puntoecologico"
 
     assert_text "Puntoecologico was successfully updated"

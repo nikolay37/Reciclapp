@@ -14,7 +14,6 @@ class RetosTest < ApplicationSystemTestCase
     visit retos_url
     click_on "New Reto"
 
-    fill_in "Idreto", with: @reto.Idreto
     fill_in "Idusuario Origina", with: @reto.idusuario_origina
     fill_in "Nombre", with: @reto.nombre
     click_on "Create Reto"
@@ -27,7 +26,6 @@ class RetosTest < ApplicationSystemTestCase
     visit retos_url
     click_on "Edit", match: :first
 
-    fill_in "Idreto", with: @reto.Idreto
     fill_in "Idusuario Origina", with: @reto.idusuario_origina
     fill_in "Nombre", with: @reto.nombre
     click_on "Update Reto"

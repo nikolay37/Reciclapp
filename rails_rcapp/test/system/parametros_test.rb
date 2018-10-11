@@ -14,7 +14,6 @@ class ParametrosTest < ApplicationSystemTestCase
     visit parametros_url
     click_on "New Parametro"
 
-    fill_in "Idparametro", with: @parametro.idparametro
     fill_in "Nombre", with: @parametro.nombre
     click_on "Create Parametro"
 
@@ -26,7 +25,6 @@ class ParametrosTest < ApplicationSystemTestCase
     visit parametros_url
     click_on "Edit", match: :first
 
-    fill_in "Idparametro", with: @parametro.idparametro
     fill_in "Nombre", with: @parametro.nombre
     click_on "Update Parametro"
 

@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Iddetalleparametro</th>
       <th>Idparametro</th>
       <th>Nombre</th>
+      <th>Parametro</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +15,9 @@
   <tbody>
     <% @detalleparametros.each do |detalleparametro| %>
       <tr>
-        <td><%= detalleparametro.iddetalleparametro %></td>
         <td><%= detalleparametro.idparametro %></td>
         <td><%= detalleparametro.nombre %></td>
+        <td><%= detalleparametro.parametro %></td>
         <td><%= link_to 'Show', detalleparametro %></td>
         <td><%= link_to 'Edit', edit_detalleparametro_path(detalleparametro) %></td>
         <td><%= link_to 'Destroy', detalleparametro, method: :delete, data: { confirm: 'Are you sure?' } %></td>

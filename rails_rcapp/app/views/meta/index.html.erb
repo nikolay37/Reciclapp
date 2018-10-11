@@ -5,12 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Idmeta</th>
       <th>Idusuario</th>
       <th>Iddetalleparametro</th>
       <th>Idreto</th>
       <th>Fechaexpiracion</th>
       <th>Cantidad</th>
+      <th>Reto</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,12 +18,12 @@
   <tbody>
     <% @meta.each do |metum| %>
       <tr>
-        <td><%= metum.Idmeta %></td>
         <td><%= metum.idusuario %></td>
         <td><%= metum.iddetalleparametro %></td>
         <td><%= metum.idreto %></td>
         <td><%= metum.Fechaexpiracion %></td>
         <td><%= metum.cantidad %></td>
+        <td><%= metum.reto %></td>
         <td><%= link_to 'Show', metum %></td>
         <td><%= link_to 'Edit', edit_metum_path(metum) %></td>
         <td><%= link_to 'Destroy', metum, method: :delete, data: { confirm: 'Are you sure?' } %></td>

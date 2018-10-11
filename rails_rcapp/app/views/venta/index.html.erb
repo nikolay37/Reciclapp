@@ -5,12 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Idventas</th>
-      <th>Idpuntoecologico</th>
       <th>Iddetalleparametro</th>
+      <th>Idredencion</th>
       <th>Fechaventa</th>
       <th>Cantidad</th>
-      <th>Valor</th>
+      <th>Valorunidad</th>
+      <th>Total</th>
       <th>Donacion</th>
       <th colspan="3"></th>
     </tr>
@@ -19,12 +19,12 @@
   <tbody>
     <% @venta.each do |ventum| %>
       <tr>
-        <td><%= ventum.idventas %></td>
-        <td><%= ventum.idpuntoecologico %></td>
         <td><%= ventum.iddetalleparametro %></td>
+        <td><%= ventum.idredencion %></td>
         <td><%= ventum.fechaventa %></td>
         <td><%= ventum.cantidad %></td>
-        <td><%= ventum.valor %></td>
+        <td><%= ventum.valorunidad %></td>
+        <td><%= ventum.total %></td>
         <td><%= ventum.donacion %></td>
         <td><%= link_to 'Show', ventum %></td>
         <td><%= link_to 'Edit', edit_ventum_path(ventum) %></td>

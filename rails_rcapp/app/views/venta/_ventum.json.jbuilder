@@ -1,2 +1,2 @@
-json.extract! ventum, :id, :idventas, :idpuntoecologico, :iddetalleparametro, :fechaventa, :cantidad, :valor, :donacion, :created_at, :updated_at
+json.extract! ventum, :id, :iddetalleparametro, :idredencion, :fechaventa, :cantidad, :valorunidad, :total, :donacion, :created_at, :updated_at
 json.url ventum_url(ventum, format: :json)

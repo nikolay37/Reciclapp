@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Idpuntoecologico</th>
       <th>Ubicacionx</th>
       <th>Ubicaciony</th>
       <th>Nombre</th>
@@ -19,13 +18,12 @@
   <tbody>
     <% @puntoecologicos.each do |puntoecologico| %>
       <tr>
-        <td><%= puntoecologico.idpuntoecologico %></td>
-        <td><%= puntoecologico.Ubicacionx %></td>
-        <td><%= puntoecologico.Ubicaciony %></td>
-        <td><%= puntoecologico.Nombre %></td>
+        <td><%= puntoecologico.ubicacionx %></td>
+        <td><%= puntoecologico.ubicaciony %></td>
+        <td><%= puntoecologico.nombre %></td>
         <td><%= puntoecologico.idresponsable %></td>
-        <td><%= puntoecologico.Fechainicio %></td>
-        <td><%= puntoecologico.Fechacierre %></td>
+        <td><%= puntoecologico.fechainicio %></td>
+        <td><%= puntoecologico.fechacierre %></td>
         <td><%= link_to 'Show', puntoecologico %></td>
         <td><%= link_to 'Edit', edit_puntoecologico_path(puntoecologico) %></td>
         <td><%= link_to 'Destroy', puntoecologico, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -15,11 +15,11 @@ class MetaTest < ApplicationSystemTestCase
     click_on "New Metum"
 
     fill_in "Fechaexpiracion", with: @metum.Fechaexpiracion
-    fill_in "Idmeta", with: @metum.Idmeta
     fill_in "Cantidad", with: @metum.cantidad
     fill_in "Iddetalleparametro", with: @metum.iddetalleparametro
     fill_in "Idreto", with: @metum.idreto
     fill_in "Idusuario", with: @metum.idusuario
+    fill_in "Reto", with: @metum.reto_id
     click_on "Create Metum"
 
     assert_text "Metum was successfully created"
@@ -31,11 +31,11 @@ class MetaTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Fechaexpiracion", with: @metum.Fechaexpiracion
-    fill_in "Idmeta", with: @metum.Idmeta
     fill_in "Cantidad", with: @metum.cantidad
     fill_in "Iddetalleparametro", with: @metum.iddetalleparametro
     fill_in "Idreto", with: @metum.idreto
     fill_in "Idusuario", with: @metum.idusuario
+    fill_in "Reto", with: @metum.reto_id
     click_on "Update Metum"
 
     assert_text "Metum was successfully updated"

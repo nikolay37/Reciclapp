@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>Idreto</th>
       <th>Idusuario origina</th>
       <th>Nombre</th>
       <th colspan="3"></th>
@@ -15,7 +14,6 @@
   <tbody>
     <% @retos.each do |reto| %>
       <tr>
-        <td><%= reto.Idreto %></td>
         <td><%= reto.idusuario_origina %></td>
         <td><%= reto.nombre %></td>
         <td><%= link_to 'Show', reto %></td>

@@ -10,59 +10,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_211803) do
+ActiveRecord::Schema.define(version: 2018_10_11_212103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "detalleparametros", force: :cascade do |t|
-    t.integer "iddetalleparametro"
     t.integer "idparametro"
     t.string "nombre"
+    t.bigint "parametro_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["parametro_id"], name: "index_detalleparametros_on_parametro_id"
   end
 
   create_table "meta", force: :cascade do |t|
-    t.integer "Idmeta"
     t.integer "idusuario"
     t.integer "iddetalleparametro"
     t.integer "idreto"
     t.datetime "Fechaexpiracion"
     t.integer "cantidad"
+    t.bigint "reto_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["reto_id"], name: "index_meta_on_reto_id"
   end
 
   create_table "parametros", force: :cascade do |t|
-    t.integer "idparametro"
-    t.string "nombre"
+    t.integer "nombre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "puntoecologicos", force: :cascade do |t|
-    t.integer "idpuntoecologico"
-    t.decimal "Ubicacionx"
-    t.decimal "Ubicaciony"
-    t.string "Nombre"
-    t.integer "idresponsable"
-    t.datetime "Fechainicio"
-    t.datetime "Fechacierre"
+    t.decimal "ubicacionx"
+    t.decimal "ubicaciony"
+    t.string "nombre"
+    t.string "idresponsable"
+    t.datetime "fechainicio"
+    t.datetime "fechacierre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "recoleccions", force: :cascade do |t|
-    t.integer "idrecoleccion"
     t.integer "Idretousuario"
     t.integer "idusu_invitado"
     t.integer "iddetalleparametro"
     t.integer "idredencion"
     t.integer "idpuntorecoleccion"
-    t.string "Estado"
-    t.datetime "Fecha"
-    t.integer "Cantidad"
+    t.string "estado"
+    t.datetime "fecha"
+    t.integer "cantidad"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -78,7 +77,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_211803) do
   end
 
   create_table "retos", force: :cascade do |t|
-    t.integer "Idreto"
     t.integer "idusuario_origina"
     t.string "nombre"
     t.datetime "created_at", null: false
@@ -86,43 +84,39 @@ ActiveRecord::Schema.define(version: 2018_10_10_211803) do
   end
 
   create_table "retousuarios", force: :cascade do |t|
-    t.integer "idreto"
     t.integer "idusu_invitado"
-    t.integer "lema"
+    t.string "lema"
+    t.bigint "reto_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["reto_id"], name: "index_retousuarios_on_reto_id"
   end
 
-  create_table "usuarios", force: :cascade do |t|
-    t.integer "idusuario"
-    t.string "nombre"
-    t.string "apellido"
-    t.string "celular"
-    t.string "email"
-    t.datetime "fechanacimiento"
-    t.string "direccion"
-    t.string "barrio"
-    t.string "edificio"
-    t.string "genero"
-    t.string "empresa"
-    t.string "clienteacueducto"
-    t.string "jac"
-    t.integer "idperfildetpar"
-    t.integer "idlocalidad"
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   create_table "venta", force: :cascade do |t|
-    t.integer "idventas"
-    t.integer "idpuntoecologico"
     t.integer "iddetalleparametro"
+    t.integer "idredencion"
     t.datetime "fechaventa"
     t.integer "cantidad"
-    t.integer "valor"
+    t.integer "valorunidad"
+    t.integer "total"
     t.string "donacion"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "detalleparametros", "parametros"
+  add_foreign_key "meta", "retos"
+  add_foreign_key "retousuarios", "retos"
 end

@@ -14,13 +14,12 @@ class RecoleccionsTest < ApplicationSystemTestCase
     visit recoleccions_url
     click_on "New Recoleccion"
 
-    fill_in "Cantidad", with: @recoleccion.Cantidad
-    fill_in "Estado", with: @recoleccion.Estado
-    fill_in "Fecha", with: @recoleccion.Fecha
     fill_in "Idretousuario", with: @recoleccion.Idretousuario
+    fill_in "Cantidad", with: @recoleccion.cantidad
+    fill_in "Estado", with: @recoleccion.estado
+    fill_in "Fecha", with: @recoleccion.fecha
     fill_in "Iddetalleparametro", with: @recoleccion.iddetalleparametro
     fill_in "Idpuntorecoleccion", with: @recoleccion.idpuntorecoleccion
-    fill_in "Idrecoleccion", with: @recoleccion.idrecoleccion
     fill_in "Idredencion", with: @recoleccion.idredencion
     fill_in "Idusu Invitado", with: @recoleccion.idusu_invitado
     click_on "Create Recoleccion"
@@ -33,13 +32,12 @@ class RecoleccionsTest < ApplicationSystemTestCase
     visit recoleccions_url
     click_on "Edit", match: :first
 
-    fill_in "Cantidad", with: @recoleccion.Cantidad
-    fill_in "Estado", with: @recoleccion.Estado
-    fill_in "Fecha", with: @recoleccion.Fecha
     fill_in "Idretousuario", with: @recoleccion.Idretousuario
+    fill_in "Cantidad", with: @recoleccion.cantidad
+    fill_in "Estado", with: @recoleccion.estado
+    fill_in "Fecha", with: @recoleccion.fecha
     fill_in "Iddetalleparametro", with: @recoleccion.iddetalleparametro
     fill_in "Idpuntorecoleccion", with: @recoleccion.idpuntorecoleccion
-    fill_in "Idrecoleccion", with: @recoleccion.idrecoleccion
     fill_in "Idredencion", with: @recoleccion.idredencion
     fill_in "Idusu Invitado", with: @recoleccion.idusu_invitado
     click_on "Update Recoleccion"

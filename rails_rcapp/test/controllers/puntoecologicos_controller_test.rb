@@ -17,7 +17,7 @@ class PuntoecologicosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create puntoecologico" do
     assert_difference('Puntoecologico.count') do
-      post puntoecologicos_url, params: { puntoecologico: { Fechacierre: @puntoecologico.Fechacierre, Fechainicio: @puntoecologico.Fechainicio, Nombre: @puntoecologico.Nombre, Ubicacionx: @puntoecologico.Ubicacionx, Ubicaciony: @puntoecologico.Ubicaciony, idpuntoecologico: @puntoecologico.idpuntoecologico, idresponsable: @puntoecologico.idresponsable } }
+      post puntoecologicos_url, params: { puntoecologico: { fechacierre: @puntoecologico.fechacierre, fechainicio: @puntoecologico.fechainicio, idresponsable: @puntoecologico.idresponsable, nombre: @puntoecologico.nombre, ubicacionx: @puntoecologico.ubicacionx, ubicaciony: @puntoecologico.ubicaciony } }
     end
 
     assert_redirected_to puntoecologico_url(Puntoecologico.last)
@@ -34,7 +34,7 @@ class PuntoecologicosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update puntoecologico" do
-    patch puntoecologico_url(@puntoecologico), params: { puntoecologico: { Fechacierre: @puntoecologico.Fechacierre, Fechainicio: @puntoecologico.Fechainicio, Nombre: @puntoecologico.Nombre, Ubicacionx: @puntoecologico.Ubicacionx, Ubicaciony: @puntoecologico.Ubicaciony, idpuntoecologico: @puntoecologico.idpuntoecologico, idresponsable: @puntoecologico.idresponsable } }
+    patch puntoecologico_url(@puntoecologico), params: { puntoecologico: { fechacierre: @puntoecologico.fechacierre, fechainicio: @puntoecologico.fechainicio, idresponsable: @puntoecologico.idresponsable, nombre: @puntoecologico.nombre, ubicacionx: @puntoecologico.ubicacionx, ubicaciony: @puntoecologico.ubicaciony } }
     assert_redirected_to puntoecologico_url(@puntoecologico)
   end
 

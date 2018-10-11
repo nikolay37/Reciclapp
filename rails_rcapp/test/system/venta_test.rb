@@ -18,9 +18,9 @@ class VentaTest < ApplicationSystemTestCase
     fill_in "Donacion", with: @ventum.donacion
     fill_in "Fechaventa", with: @ventum.fechaventa
     fill_in "Iddetalleparametro", with: @ventum.iddetalleparametro
-    fill_in "Idpuntoecologico", with: @ventum.idpuntoecologico
-    fill_in "Idventas", with: @ventum.idventas
-    fill_in "Valor", with: @ventum.valor
+    fill_in "Idredencion", with: @ventum.idredencion
+    fill_in "Total", with: @ventum.total
+    fill_in "Valorunidad", with: @ventum.valorunidad
     click_on "Create Ventum"
 
     assert_text "Ventum was successfully created"
@@ -35,9 +35,9 @@ class VentaTest < ApplicationSystemTestCase
     fill_in "Donacion", with: @ventum.donacion
     fill_in "Fechaventa", with: @ventum.fechaventa
     fill_in "Iddetalleparametro", with: @ventum.iddetalleparametro
-    fill_in "Idpuntoecologico", with: @ventum.idpuntoecologico
-    fill_in "Idventas", with: @ventum.idventas
-    fill_in "Valor", with: @ventum.valor
+    fill_in "Idredencion", with: @ventum.idredencion
+    fill_in "Total", with: @ventum.total
+    fill_in "Valorunidad", with: @ventum.valorunidad
     click_on "Update Ventum"
 
     assert_text "Ventum was successfully updated"

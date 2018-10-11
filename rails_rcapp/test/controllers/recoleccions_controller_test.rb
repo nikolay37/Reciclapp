@@ -17,7 +17,7 @@ class RecoleccionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create recoleccion" do
     assert_difference('Recoleccion.count') do
-      post recoleccions_url, params: { recoleccion: { Cantidad: @recoleccion.Cantidad, Estado: @recoleccion.Estado, Fecha: @recoleccion.Fecha, Idretousuario: @recoleccion.Idretousuario, iddetalleparametro: @recoleccion.iddetalleparametro, idpuntorecoleccion: @recoleccion.idpuntorecoleccion, idrecoleccion: @recoleccion.idrecoleccion, idredencion: @recoleccion.idredencion, idusu_invitado: @recoleccion.idusu_invitado } }
+      post recoleccions_url, params: { recoleccion: { Idretousuario: @recoleccion.Idretousuario, cantidad: @recoleccion.cantidad, estado: @recoleccion.estado, fecha: @recoleccion.fecha, iddetalleparametro: @recoleccion.iddetalleparametro, idpuntorecoleccion: @recoleccion.idpuntorecoleccion, idredencion: @recoleccion.idredencion, idusu_invitado: @recoleccion.idusu_invitado } }
     end
 
     assert_redirected_to recoleccion_url(Recoleccion.last)
@@ -34,7 +34,7 @@ class RecoleccionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update recoleccion" do
-    patch recoleccion_url(@recoleccion), params: { recoleccion: { Cantidad: @recoleccion.Cantidad, Estado: @recoleccion.Estado, Fecha: @recoleccion.Fecha, Idretousuario: @recoleccion.Idretousuario, iddetalleparametro: @recoleccion.iddetalleparametro, idpuntorecoleccion: @recoleccion.idpuntorecoleccion, idrecoleccion: @recoleccion.idrecoleccion, idredencion: @recoleccion.idredencion, idusu_invitado: @recoleccion.idusu_invitado } }
+    patch recoleccion_url(@recoleccion), params: { recoleccion: { Idretousuario: @recoleccion.Idretousuario, cantidad: @recoleccion.cantidad, estado: @recoleccion.estado, fecha: @recoleccion.fecha, iddetalleparametro: @recoleccion.iddetalleparametro, idpuntorecoleccion: @recoleccion.idpuntorecoleccion, idredencion: @recoleccion.idredencion, idusu_invitado: @recoleccion.idusu_invitado } }
     assert_redirected_to recoleccion_url(@recoleccion)
   end
 

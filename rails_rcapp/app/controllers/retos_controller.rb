@@ -69,6 +69,6 @@ class RetosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def reto_params
-      params.require(:reto).permit(:Idreto, :idusuario_origina, :nombre)
+      params.require(:reto).permit(:idusuario_origina, :nombre)
     end
 end

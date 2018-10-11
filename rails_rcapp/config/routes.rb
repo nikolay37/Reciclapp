@@ -1,15 +1,14 @@
 Rails.application.routes.draw do
-  resources :tasks
+  devise_for :users
+  resources :detalleparametros
+  resources :parametros
   resources :venta
   resources :puntoecologicos
   resources :redencions
-  resources :meta
   resources :recoleccions
-  resources :retos
+  resources :meta
   resources :retousuarios
-  resources :detalleparametros
-  resources :parametros
-  resources :usuarios
+  resources :retos
+  root to: "home#index"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root :to => "usuarios#show"
 end

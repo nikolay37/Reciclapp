@@ -17,7 +17,7 @@ class ParametrosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create parametro" do
     assert_difference('Parametro.count') do
-      post parametros_url, params: { parametro: { idparametro: @parametro.idparametro, nombre: @parametro.nombre } }
+      post parametros_url, params: { parametro: { nombre: @parametro.nombre } }
     end
 
     assert_redirected_to parametro_url(Parametro.last)
@@ -34,7 +34,7 @@ class ParametrosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update parametro" do
-    patch parametro_url(@parametro), params: { parametro: { idparametro: @parametro.idparametro, nombre: @parametro.nombre } }
+    patch parametro_url(@parametro), params: { parametro: { nombre: @parametro.nombre } }
     assert_redirected_to parametro_url(@parametro)
   end
 

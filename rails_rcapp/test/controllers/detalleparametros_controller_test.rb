@@ -17,7 +17,7 @@ class DetalleparametrosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create detalleparametro" do
     assert_difference('Detalleparametro.count') do
-      post detalleparametros_url, params: { detalleparametro: { iddetalleparametro: @detalleparametro.iddetalleparametro, idparametro: @detalleparametro.idparametro, nombre: @detalleparametro.nombre } }
+      post detalleparametros_url, params: { detalleparametro: { idparametro: @detalleparametro.idparametro, nombre: @detalleparametro.nombre, parametro_id: @detalleparametro.parametro_id } }
     end
 
     assert_redirected_to detalleparametro_url(Detalleparametro.last)
@@ -34,7 +34,7 @@ class DetalleparametrosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update detalleparametro" do
-    patch detalleparametro_url(@detalleparametro), params: { detalleparametro: { iddetalleparametro: @detalleparametro.iddetalleparametro, idparametro: @detalleparametro.idparametro, nombre: @detalleparametro.nombre } }
+    patch detalleparametro_url(@detalleparametro), params: { detalleparametro: { idparametro: @detalleparametro.idparametro, nombre: @detalleparametro.nombre, parametro_id: @detalleparametro.parametro_id } }
     assert_redirected_to detalleparametro_url(@detalleparametro)
   end
 
