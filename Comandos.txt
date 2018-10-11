@@ -115,6 +115,48 @@ rails g scaffold list name
 rails g scaffold task name list:references
 
 
+gem 'devise'
+
+gem 'bootstrap', '~> 4.1.3'
+
+
+# Configurar devise
+bundle add devise
+rails generate devise:install
+
+luego de configurar los 4 pasos
+rails generate devise User
+rails db:migrate
+rails s 
+rake routes
+
+
+
+
+config environment developers
+puerto 3000
+
+routes
+root to: "homeindex"
+
+
+app view layaou aplication
+
+
+
+
+ <% if current_user %>
+  <%= current_user.email %>.
+ <% end %>
+
+ <% if current_user %>
+   <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete %>
+ <% else %>
+   <%= link_to 'Iniciar sesión', new_user_session_path %>
+   <%= link_to 'Registrarse', new_user_registration_path %>
+ <% end %>
+
+
 ionic
 npm install -g ionic cordova
 npm install -g ionic
