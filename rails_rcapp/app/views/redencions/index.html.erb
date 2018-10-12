@@ -5,11 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Idredencion</th>
       <th>Idusuario</th>
       <th>Idpremio</th>
       <th>Fecharedencion</th>
       <th>Cantidadpremio</th>
+      <th>Cantidadpremio</th>
+      <th>Reto</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,11 +18,12 @@
   <tbody>
     <% @redencions.each do |redencion| %>
       <tr>
-        <td><%= redencion.idredencion %></td>
         <td><%= redencion.idusuario %></td>
         <td><%= redencion.idpremio %></td>
         <td><%= redencion.fecharedencion %></td>
         <td><%= redencion.Cantidadpremio %></td>
+        <td><%= redencion.Cantidadpremio %></td>
+        <td><%= redencion.reto %></td>
         <td><%= link_to 'Show', redencion %></td>
         <td><%= link_to 'Edit', edit_redencion_path(redencion) %></td>
         <td><%= link_to 'Destroy', redencion, method: :delete, data: { confirm: 'Are you sure?' } %></td>

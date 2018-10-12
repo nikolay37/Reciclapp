@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_11_212103) do
+ActiveRecord::Schema.define(version: 2018_10_12_212705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,15 +25,14 @@ ActiveRecord::Schema.define(version: 2018_10_11_212103) do
   end
 
   create_table "meta", force: :cascade do |t|
-    t.integer "idusuario"
-    t.integer "iddetalleparametro"
-    t.integer "idreto"
-    t.datetime "Fechaexpiracion"
+    t.datetime "fechaexpiracion"
     t.integer "cantidad"
-    t.bigint "reto_id"
+    t.bigint "retos_id"
+    t.bigint "detalleparametros_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["reto_id"], name: "index_meta_on_reto_id"
+    t.index ["detalleparametros_id"], name: "index_meta_on_detalleparametros_id"
+    t.index ["retos_id"], name: "index_meta_on_retos_id"
   end
 
   create_table "parametros", force: :cascade do |t|
@@ -54,7 +53,6 @@ ActiveRecord::Schema.define(version: 2018_10_11_212103) do
   end
 
   create_table "recoleccions", force: :cascade do |t|
-    t.integer "Idretousuario"
     t.integer "idusu_invitado"
     t.integer "iddetalleparametro"
     t.integer "idredencion"
@@ -62,18 +60,24 @@ ActiveRecord::Schema.define(version: 2018_10_11_212103) do
     t.string "estado"
     t.datetime "fecha"
     t.integer "cantidad"
+    t.integer "idventa"
+    t.bigint "retousuario_id"
+    t.bigint "detalleparametro_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["detalleparametro_id"], name: "index_recoleccions_on_detalleparametro_id"
+    t.index ["retousuario_id"], name: "index_recoleccions_on_retousuario_id"
   end
 
   create_table "redencions", force: :cascade do |t|
-    t.integer "idredencion"
     t.integer "idusuario"
     t.integer "idpremio"
-    t.datetime "fecharedencion"
+    t.integer "fecharedencion"
     t.integer "Cantidadpremio"
+    t.bigint "reto_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["reto_id"], name: "index_redencions_on_reto_id"
   end
 
   create_table "retos", force: :cascade do |t|
@@ -84,12 +88,13 @@ ActiveRecord::Schema.define(version: 2018_10_11_212103) do
   end
 
   create_table "retousuarios", force: :cascade do |t|
-    t.integer "idusu_invitado"
     t.string "lema"
     t.bigint "reto_id"
+    t.bigint "users_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["reto_id"], name: "index_retousuarios_on_reto_id"
+    t.index ["users_id"], name: "index_retousuarios_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -117,6 +122,11 @@ ActiveRecord::Schema.define(version: 2018_10_11_212103) do
   end
 
   add_foreign_key "detalleparametros", "parametros"
-  add_foreign_key "meta", "retos"
+  add_foreign_key "meta", "detalleparametros", column: "detalleparametros_id"
+  add_foreign_key "meta", "retos", column: "retos_id"
+  add_foreign_key "recoleccions", "detalleparametros"
+  add_foreign_key "recoleccions", "retousuarios"
+  add_foreign_key "redencions", "retos"
   add_foreign_key "retousuarios", "retos"
+  add_foreign_key "retousuarios", "users", column: "users_id"
 end

@@ -69,6 +69,6 @@ class RedencionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def redencion_params
-      params.require(:redencion).permit(:idredencion, :idusuario, :idpremio, :fecharedencion, :Cantidadpremio)
+      params.require(:redencion).permit(:idusuario, :idpremio, :fecharedencion, :Cantidadpremio, :Cantidadpremio, :reto_id)
     end
 end

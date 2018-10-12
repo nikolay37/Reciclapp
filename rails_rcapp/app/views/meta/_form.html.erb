@@ -12,23 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :idusuario %>
-    <%= form.number_field :idusuario %>
-  </div>
-
-  <div class="field">
-    <%= form.label :iddetalleparametro %>
-    <%= form.number_field :iddetalleparametro %>
-  </div>
-
-  <div class="field">
-    <%= form.label :idreto %>
-    <%= form.number_field :idreto %>
-  </div>
-
-  <div class="field">
-    <%= form.label :Fechaexpiracion %>
-    <%= form.datetime_select :Fechaexpiracion %>
+    <%= form.label :fechaexpiracion %>
+    <%= form.datetime_select :fechaexpiracion %>
   </div>
 
   <div class="field">
@@ -37,8 +22,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :reto_id %>
-    <%= form.text_field :reto_id %>
+    <%= form.label :retos_id %>
+    <%= form.text_field :retos_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detalleparametros_id %>
+    <%= form.text_field :detalleparametros_id %>
   </div>
 
   <div class="actions">

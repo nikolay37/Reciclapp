@@ -1,21 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  Idretousuario: 1
   idusu_invitado: 1
   iddetalleparametro: 1
   idredencion: 1
   idpuntorecoleccion: 1
   estado: MyString
-  fecha: 2018-10-11 15:52:48
+  fecha: 2018-10-12 16:22:54
   cantidad: 1
+  idventa: 1
+  retousuario: one
+  detalleparametro: one
 
 two:
-  Idretousuario: 1
   idusu_invitado: 1
   iddetalleparametro: 1
   idredencion: 1
   idpuntorecoleccion: 1
   estado: MyString
-  fecha: 2018-10-11 15:52:48
+  fecha: 2018-10-12 16:22:54
   cantidad: 1
+  idventa: 1
+  retousuario: two
+  detalleparametro: two

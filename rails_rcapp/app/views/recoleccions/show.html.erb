@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Idretousuario:</strong>
-  <%= @recoleccion.Idretousuario %>
-</p>
-
-<p>
   <strong>Idusu invitado:</strong>
   <%= @recoleccion.idusu_invitado %>
 </p>
@@ -38,6 +33,21 @@
 <p>
   <strong>Cantidad:</strong>
   <%= @recoleccion.cantidad %>
+</p>
+
+<p>
+  <strong>Idventa:</strong>
+  <%= @recoleccion.idventa %>
+</p>
+
+<p>
+  <strong>Retousuario:</strong>
+  <%= @recoleccion.retousuario %>
+</p>
+
+<p>
+  <strong>Detalleparametro:</strong>
+  <%= @recoleccion.detalleparametro %>
 </p>
 
 <%= link_to 'Edit', edit_recoleccion_path(@recoleccion) %> |

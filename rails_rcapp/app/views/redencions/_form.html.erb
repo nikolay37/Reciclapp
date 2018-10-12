@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :idredencion %>
-    <%= form.number_field :idredencion %>
-  </div>
-
-  <div class="field">
     <%= form.label :idusuario %>
     <%= form.number_field :idusuario %>
   </div>
@@ -28,12 +23,22 @@
 
   <div class="field">
     <%= form.label :fecharedencion %>
-    <%= form.datetime_select :fecharedencion %>
+    <%= form.number_field :fecharedencion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cantidadpremio %>
+    <%= form.datetime_select :Cantidadpremio %>
   </div>
 
   <div class="field">
     <%= form.label :Cantidadpremio %>
     <%= form.number_field :Cantidadpremio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reto_id %>
+    <%= form.text_field :reto_id %>
   </div>
 
   <div class="actions">

@@ -14,9 +14,9 @@ class RetousuariosTest < ApplicationSystemTestCase
     visit retousuarios_url
     click_on "New Retousuario"
 
-    fill_in "Idusu Invitado", with: @retousuario.idusu_invitado
     fill_in "Lema", with: @retousuario.lema
     fill_in "Reto", with: @retousuario.reto_id
+    fill_in "Users", with: @retousuario.users_id
     click_on "Create Retousuario"
 
     assert_text "Retousuario was successfully created"
@@ -27,9 +27,9 @@ class RetousuariosTest < ApplicationSystemTestCase
     visit retousuarios_url
     click_on "Edit", match: :first
 
-    fill_in "Idusu Invitado", with: @retousuario.idusu_invitado
     fill_in "Lema", with: @retousuario.lema
     fill_in "Reto", with: @retousuario.reto_id
+    fill_in "Users", with: @retousuario.users_id
     click_on "Update Retousuario"
 
     assert_text "Retousuario was successfully updated"

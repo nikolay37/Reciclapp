@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  idusu_invitado: 1
   lema: MyString
   reto: one
+  users: one
 
 two:
-  idusu_invitado: 1
   lema: MyString
   reto: two
+  users: two

@@ -12,11 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :Idretousuario %>
-    <%= form.number_field :Idretousuario %>
-  </div>
-
-  <div class="field">
     <%= form.label :idusu_invitado %>
     <%= form.number_field :idusu_invitado %>
   </div>
@@ -49,6 +44,21 @@
   <div class="field">
     <%= form.label :cantidad %>
     <%= form.number_field :cantidad %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idventa %>
+    <%= form.number_field :idventa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :retousuario_id %>
+    <%= form.text_field :retousuario_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detalleparametro_id %>
+    <%= form.text_field :detalleparametro_id %>
   </div>
 
   <div class="actions">

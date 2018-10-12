@@ -1,11 +1,12 @@
 class CreateRedencions < ActiveRecord::Migration[5.2]
   def change
     create_table :redencions do |t|
-      t.integer :idredencion
       t.integer :idusuario
       t.integer :idpremio
-      t.datetime :fecharedencion
+      t.integer :fecharedencion
+      t.datetime :Cantidadpremio
       t.integer :Cantidadpremio
+      t.references :reto, foreign_key: true
 
       t.timestamps
     end

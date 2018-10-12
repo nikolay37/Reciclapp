@@ -69,6 +69,6 @@ class RecoleccionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recoleccion_params
-      params.require(:recoleccion).permit(:Idretousuario, :idusu_invitado, :iddetalleparametro, :idredencion, :idpuntorecoleccion, :estado, :fecha, :cantidad)
+      params.require(:recoleccion).permit(:idusu_invitado, :iddetalleparametro, :idredencion, :idpuntorecoleccion, :estado, :fecha, :cantidad, :idventa, :retousuario_id, :detalleparametro_id)
     end
 end

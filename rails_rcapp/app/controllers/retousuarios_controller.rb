@@ -69,6 +69,6 @@ class RetousuariosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def retousuario_params
-      params.require(:retousuario).permit(:idusu_invitado, :lema, :reto_id)
+      params.require(:retousuario).permit(:lema, :reto_id, :users_id)
     end
 end

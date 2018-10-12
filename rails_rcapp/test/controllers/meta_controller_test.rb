@@ -17,7 +17,7 @@ class MetaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create metum" do
     assert_difference('Metum.count') do
-      post meta_url, params: { metum: { Fechaexpiracion: @metum.Fechaexpiracion, cantidad: @metum.cantidad, iddetalleparametro: @metum.iddetalleparametro, idreto: @metum.idreto, idusuario: @metum.idusuario, reto_id: @metum.reto_id } }
+      post meta_url, params: { metum: { cantidad: @metum.cantidad, detalleparametros_id: @metum.detalleparametros_id, fechaexpiracion: @metum.fechaexpiracion, retos_id: @metum.retos_id } }
     end
 
     assert_redirected_to metum_url(Metum.last)
@@ -34,7 +34,7 @@ class MetaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update metum" do
-    patch metum_url(@metum), params: { metum: { Fechaexpiracion: @metum.Fechaexpiracion, cantidad: @metum.cantidad, iddetalleparametro: @metum.iddetalleparametro, idreto: @metum.idreto, idusuario: @metum.idusuario, reto_id: @metum.reto_id } }
+    patch metum_url(@metum), params: { metum: { cantidad: @metum.cantidad, detalleparametros_id: @metum.detalleparametros_id, fechaexpiracion: @metum.fechaexpiracion, retos_id: @metum.retos_id } }
     assert_redirected_to metum_url(@metum)
   end
 

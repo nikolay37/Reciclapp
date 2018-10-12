@@ -17,8 +17,8 @@ class RedencionsTest < ApplicationSystemTestCase
     fill_in "Cantidadpremio", with: @redencion.Cantidadpremio
     fill_in "Fecharedencion", with: @redencion.fecharedencion
     fill_in "Idpremio", with: @redencion.idpremio
-    fill_in "Idredencion", with: @redencion.idredencion
     fill_in "Idusuario", with: @redencion.idusuario
+    fill_in "Reto", with: @redencion.reto_id
     click_on "Create Redencion"
 
     assert_text "Redencion was successfully created"
@@ -32,8 +32,8 @@ class RedencionsTest < ApplicationSystemTestCase
     fill_in "Cantidadpremio", with: @redencion.Cantidadpremio
     fill_in "Fecharedencion", with: @redencion.fecharedencion
     fill_in "Idpremio", with: @redencion.idpremio
-    fill_in "Idredencion", with: @redencion.idredencion
     fill_in "Idusuario", with: @redencion.idusuario
+    fill_in "Reto", with: @redencion.reto_id
     click_on "Update Redencion"
 
     assert_text "Redencion was successfully updated"

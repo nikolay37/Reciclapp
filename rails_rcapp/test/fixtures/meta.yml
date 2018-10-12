@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  idusuario: 1
-  iddetalleparametro: 1
-  idreto: 1
-  Fechaexpiracion: 2018-10-11 15:52:35
+  fechaexpiracion: 2018-10-12 16:17:49
   cantidad: 1
-  reto: one
+  retos: one
+  detalleparametros: one
 
 two:
-  idusuario: 1
-  iddetalleparametro: 1
-  idreto: 1
-  Fechaexpiracion: 2018-10-11 15:52:35
+  fechaexpiracion: 2018-10-12 16:17:49
   cantidad: 1
-  reto: two
+  retos: two
+  detalleparametros: two

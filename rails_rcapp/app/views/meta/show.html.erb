@@ -1,23 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Idusuario:</strong>
-  <%= @metum.idusuario %>
-</p>
-
-<p>
-  <strong>Iddetalleparametro:</strong>
-  <%= @metum.iddetalleparametro %>
-</p>
-
-<p>
-  <strong>Idreto:</strong>
-  <%= @metum.idreto %>
-</p>
-
-<p>
   <strong>Fechaexpiracion:</strong>
-  <%= @metum.Fechaexpiracion %>
+  <%= @metum.fechaexpiracion %>
 </p>
 
 <p>
@@ -26,8 +11,13 @@
 </p>
 
 <p>
-  <strong>Reto:</strong>
-  <%= @metum.reto %>
+  <strong>Retos:</strong>
+  <%= @metum.retos %>
+</p>
+
+<p>
+  <strong>Detalleparametros:</strong>
+  <%= @metum.detalleparametros %>
 </p>
 
 <%= link_to 'Edit', edit_metum_path(@metum) %> |
