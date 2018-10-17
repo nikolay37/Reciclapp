@@ -14,12 +14,14 @@ class PuntoecologicosTest < ApplicationSystemTestCase
     visit puntoecologicos_url
     click_on "New Puntoecologico"
 
+    fill_in "Detalleparametros", with: @puntoecologico.detalleparametros_id
     fill_in "Fechacierre", with: @puntoecologico.fechacierre
     fill_in "Fechainicio", with: @puntoecologico.fechainicio
     fill_in "Idresponsable", with: @puntoecologico.idresponsable
     fill_in "Nombre", with: @puntoecologico.nombre
     fill_in "Ubicacionx", with: @puntoecologico.ubicacionx
     fill_in "Ubicaciony", with: @puntoecologico.ubicaciony
+    fill_in "Users", with: @puntoecologico.users_id
     click_on "Create Puntoecologico"
 
     assert_text "Puntoecologico was successfully created"
@@ -30,12 +32,14 @@ class PuntoecologicosTest < ApplicationSystemTestCase
     visit puntoecologicos_url
     click_on "Edit", match: :first
 
+    fill_in "Detalleparametros", with: @puntoecologico.detalleparametros_id
     fill_in "Fechacierre", with: @puntoecologico.fechacierre
     fill_in "Fechainicio", with: @puntoecologico.fechainicio
     fill_in "Idresponsable", with: @puntoecologico.idresponsable
     fill_in "Nombre", with: @puntoecologico.nombre
     fill_in "Ubicacionx", with: @puntoecologico.ubicacionx
     fill_in "Ubicaciony", with: @puntoecologico.ubicaciony
+    fill_in "Users", with: @puntoecologico.users_id
     click_on "Update Puntoecologico"
 
     assert_text "Puntoecologico was successfully updated"

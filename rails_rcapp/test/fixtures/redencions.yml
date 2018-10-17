@@ -2,16 +2,16 @@
 
 one:
   idusuario: 1
-  idpremio: 1
-  fecharedencion: 1
-  Cantidadpremio: 2018-10-12 16:26:11
+  fecharedencion: 2018-10-13 11:43:28
   Cantidadpremio: 1
-  reto: one
+  disponible: 1
+  nota: MyString
+  detalleparametros: one
 
 two:
   idusuario: 1
-  idpremio: 1
-  fecharedencion: 1
-  Cantidadpremio: 2018-10-12 16:26:11
+  fecharedencion: 2018-10-13 11:43:28
   Cantidadpremio: 1
-  reto: two
+  disponible: 1
+  nota: MyString
+  detalleparametros: two

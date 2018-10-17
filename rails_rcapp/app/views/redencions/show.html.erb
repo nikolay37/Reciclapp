@@ -6,11 +6,6 @@
 </p>
 
 <p>
-  <strong>Idpremio:</strong>
-  <%= @redencion.idpremio %>
-</p>
-
-<p>
   <strong>Fecharedencion:</strong>
   <%= @redencion.fecharedencion %>
 </p>
@@ -21,13 +16,18 @@
 </p>
 
 <p>
-  <strong>Cantidadpremio:</strong>
-  <%= @redencion.Cantidadpremio %>
+  <strong>Disponible:</strong>
+  <%= @redencion.disponible %>
 </p>
 
 <p>
-  <strong>Reto:</strong>
-  <%= @redencion.reto %>
+  <strong>Nota:</strong>
+  <%= @redencion.nota %>
+</p>
+
+<p>
+  <strong>Detalleparametros:</strong>
+  <%= @redencion.detalleparametros %>
 </p>
 
 <%= link_to 'Edit', edit_redencion_path(@redencion) %> |

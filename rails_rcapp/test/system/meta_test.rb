@@ -17,6 +17,7 @@ class MetaTest < ApplicationSystemTestCase
     fill_in "Cantidad", with: @metum.cantidad
     fill_in "Detalleparametros", with: @metum.detalleparametros_id
     fill_in "Fechaexpiracion", with: @metum.fechaexpiracion
+    fill_in "Nota", with: @metum.nota
     fill_in "Retos", with: @metum.retos_id
     click_on "Create Metum"
 
@@ -31,6 +32,7 @@ class MetaTest < ApplicationSystemTestCase
     fill_in "Cantidad", with: @metum.cantidad
     fill_in "Detalleparametros", with: @metum.detalleparametros_id
     fill_in "Fechaexpiracion", with: @metum.fechaexpiracion
+    fill_in "Nota", with: @metum.nota
     fill_in "Retos", with: @metum.retos_id
     click_on "Update Metum"
 

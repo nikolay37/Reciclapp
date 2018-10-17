@@ -14,9 +14,8 @@ class DetalleparametrosTest < ApplicationSystemTestCase
     visit detalleparametros_url
     click_on "New Detalleparametro"
 
-    fill_in "Idparametro", with: @detalleparametro.idparametro
     fill_in "Nombre", with: @detalleparametro.nombre
-    fill_in "Parametro", with: @detalleparametro.parametro_id
+    fill_in "Parametros", with: @detalleparametro.parametros_id
     click_on "Create Detalleparametro"
 
     assert_text "Detalleparametro was successfully created"
@@ -27,9 +26,8 @@ class DetalleparametrosTest < ApplicationSystemTestCase
     visit detalleparametros_url
     click_on "Edit", match: :first
 
-    fill_in "Idparametro", with: @detalleparametro.idparametro
     fill_in "Nombre", with: @detalleparametro.nombre
-    fill_in "Parametro", with: @detalleparametro.parametro_id
+    fill_in "Parametros", with: @detalleparametro.parametros_id
     click_on "Update Detalleparametro"
 
     assert_text "Detalleparametro was successfully updated"

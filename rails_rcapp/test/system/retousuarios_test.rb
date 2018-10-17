@@ -15,7 +15,8 @@ class RetousuariosTest < ApplicationSystemTestCase
     click_on "New Retousuario"
 
     fill_in "Lema", with: @retousuario.lema
-    fill_in "Reto", with: @retousuario.reto_id
+    fill_in "Nota", with: @retousuario.nota
+    fill_in "Retos", with: @retousuario.retos_id
     fill_in "Users", with: @retousuario.users_id
     click_on "Create Retousuario"
 
@@ -28,7 +29,8 @@ class RetousuariosTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Lema", with: @retousuario.lema
-    fill_in "Reto", with: @retousuario.reto_id
+    fill_in "Nota", with: @retousuario.nota
+    fill_in "Retos", with: @retousuario.retos_id
     fill_in "Users", with: @retousuario.users_id
     click_on "Update Retousuario"
 

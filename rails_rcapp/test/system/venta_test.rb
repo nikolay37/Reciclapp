@@ -15,10 +15,11 @@ class VentaTest < ApplicationSystemTestCase
     click_on "New Ventum"
 
     fill_in "Cantidad", with: @ventum.cantidad
+    fill_in "Comprador", with: @ventum.comprador
+    fill_in "Detalleparametros", with: @ventum.detalleparametros_id
     fill_in "Donacion", with: @ventum.donacion
     fill_in "Fechaventa", with: @ventum.fechaventa
-    fill_in "Iddetalleparametro", with: @ventum.iddetalleparametro
-    fill_in "Idredencion", with: @ventum.idredencion
+    fill_in "Redencions", with: @ventum.redencions_id
     fill_in "Total", with: @ventum.total
     fill_in "Valorunidad", with: @ventum.valorunidad
     click_on "Create Ventum"
@@ -32,10 +33,11 @@ class VentaTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Cantidad", with: @ventum.cantidad
+    fill_in "Comprador", with: @ventum.comprador
+    fill_in "Detalleparametros", with: @ventum.detalleparametros_id
     fill_in "Donacion", with: @ventum.donacion
     fill_in "Fechaventa", with: @ventum.fechaventa
-    fill_in "Iddetalleparametro", with: @ventum.iddetalleparametro
-    fill_in "Idredencion", with: @ventum.idredencion
+    fill_in "Redencions", with: @ventum.redencions_id
     fill_in "Total", with: @ventum.total
     fill_in "Valorunidad", with: @ventum.valorunidad
     click_on "Update Ventum"

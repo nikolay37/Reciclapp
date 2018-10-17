@@ -5,8 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Idusuario origina</th>
       <th>Nombre</th>
+      <th>Patrocinadox</th>
+      <th>Users</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,8 +15,9 @@
   <tbody>
     <% @retos.each do |reto| %>
       <tr>
-        <td><%= reto.idusuario_origina %></td>
         <td><%= reto.nombre %></td>
+        <td><%= reto.patrocinadox %></td>
+        <td><%= reto.users_id %></td>
         <td><%= link_to 'Show', reto %></td>
         <td><%= link_to 'Edit', edit_reto_path(reto) %></td>
         <td><%= link_to 'Destroy', reto, method: :delete, data: { confirm: 'Are you sure?' } %></td>

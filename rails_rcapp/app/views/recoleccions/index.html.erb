@@ -5,16 +5,17 @@
 <table>
   <thead>
     <tr>
-      <th>Idusu invitado</th>
+      <th>Idventa</th>
       <th>Iddetalleparametro</th>
       <th>Idredencion</th>
       <th>Idpuntorecoleccion</th>
       <th>Estado</th>
       <th>Fecha</th>
       <th>Cantidad</th>
-      <th>Idventa</th>
-      <th>Retousuario</th>
-      <th>Detalleparametro</th>
+      <th>Nota</th>
+      <th>Nota</th>
+      <th>Retousuarios</th>
+      <th>Detalleparametros</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,16 +23,17 @@
   <tbody>
     <% @recoleccions.each do |recoleccion| %>
       <tr>
-        <td><%= recoleccion.idusu_invitado %></td>
+        <td><%= recoleccion.idventa %></td>
         <td><%= recoleccion.iddetalleparametro %></td>
         <td><%= recoleccion.idredencion %></td>
         <td><%= recoleccion.idpuntorecoleccion %></td>
         <td><%= recoleccion.estado %></td>
         <td><%= recoleccion.fecha %></td>
         <td><%= recoleccion.cantidad %></td>
-        <td><%= recoleccion.idventa %></td>
-        <td><%= recoleccion.retousuario %></td>
-        <td><%= recoleccion.detalleparametro %></td>
+        <td><%= recoleccion.nota %></td>
+        <td><%= recoleccion.nota %></td>
+        <td><%= recoleccion.retousuarios %></td>
+        <td><%= recoleccion.detalleparametros %></td>
         <td><%= link_to 'Show', recoleccion %></td>
         <td><%= link_to 'Edit', edit_recoleccion_path(recoleccion) %></td>
         <td><%= link_to 'Destroy', recoleccion, method: :delete, data: { confirm: 'Are you sure?' } %></td>

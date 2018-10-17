@@ -17,7 +17,7 @@ class RetosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create reto" do
     assert_difference('Reto.count') do
-      post retos_url, params: { reto: { idusuario_origina: @reto.idusuario_origina, nombre: @reto.nombre } }
+      post retos_url, params: { reto: { nombre: @reto.nombre, patrocinadox: @reto.patrocinadox, users_id: @reto.users_id } }
     end
 
     assert_redirected_to reto_url(Reto.last)
@@ -34,7 +34,7 @@ class RetosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update reto" do
-    patch reto_url(@reto), params: { reto: { idusuario_origina: @reto.idusuario_origina, nombre: @reto.nombre } }
+    patch reto_url(@reto), params: { reto: { nombre: @reto.nombre, patrocinadox: @reto.patrocinadox, users_id: @reto.users_id } }
     assert_redirected_to reto_url(@reto)
   end
 

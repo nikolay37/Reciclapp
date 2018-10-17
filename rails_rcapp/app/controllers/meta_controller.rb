@@ -69,6 +69,6 @@ class MetaController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def metum_params
-      params.require(:metum).permit(:fechaexpiracion, :cantidad, :retos_id, :detalleparametros_id)
+      params.require(:metum).permit(:fechaexpiracion, :cantidad, :nota, :retos_id, :detalleparametros_id)
     end
 end

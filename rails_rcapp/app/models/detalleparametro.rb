@@ -1,3 +1,3 @@
 class Detalleparametro < ApplicationRecord
-  belongs_to :parametro
+  belongs_to :parametros
 end

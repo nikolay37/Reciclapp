@@ -1,4 +1,4 @@
 class Recoleccion < ApplicationRecord
-  belongs_to :retousuario
-  belongs_to :detalleparametro
+  belongs_to :retousuarios
+  belongs_to :detalleparametros
 end

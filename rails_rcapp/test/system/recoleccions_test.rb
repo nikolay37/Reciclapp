@@ -15,15 +15,15 @@ class RecoleccionsTest < ApplicationSystemTestCase
     click_on "New Recoleccion"
 
     fill_in "Cantidad", with: @recoleccion.cantidad
-    fill_in "Detalleparametro", with: @recoleccion.detalleparametro_id
+    fill_in "Detalleparametros", with: @recoleccion.detalleparametros_id
     fill_in "Estado", with: @recoleccion.estado
     fill_in "Fecha", with: @recoleccion.fecha
     fill_in "Iddetalleparametro", with: @recoleccion.iddetalleparametro
     fill_in "Idpuntorecoleccion", with: @recoleccion.idpuntorecoleccion
     fill_in "Idredencion", with: @recoleccion.idredencion
-    fill_in "Idusu Invitado", with: @recoleccion.idusu_invitado
     fill_in "Idventa", with: @recoleccion.idventa
-    fill_in "Retousuario", with: @recoleccion.retousuario_id
+    fill_in "Nota", with: @recoleccion.nota
+    fill_in "Retousuarios", with: @recoleccion.retousuarios_id
     click_on "Create Recoleccion"
 
     assert_text "Recoleccion was successfully created"
@@ -35,15 +35,15 @@ class RecoleccionsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Cantidad", with: @recoleccion.cantidad
-    fill_in "Detalleparametro", with: @recoleccion.detalleparametro_id
+    fill_in "Detalleparametros", with: @recoleccion.detalleparametros_id
     fill_in "Estado", with: @recoleccion.estado
     fill_in "Fecha", with: @recoleccion.fecha
     fill_in "Iddetalleparametro", with: @recoleccion.iddetalleparametro
     fill_in "Idpuntorecoleccion", with: @recoleccion.idpuntorecoleccion
     fill_in "Idredencion", with: @recoleccion.idredencion
-    fill_in "Idusu Invitado", with: @recoleccion.idusu_invitado
     fill_in "Idventa", with: @recoleccion.idventa
-    fill_in "Retousuario", with: @recoleccion.retousuario_id
+    fill_in "Nota", with: @recoleccion.nota
+    fill_in "Retousuarios", with: @recoleccion.retousuarios_id
     click_on "Update Recoleccion"
 
     assert_text "Recoleccion was successfully updated"

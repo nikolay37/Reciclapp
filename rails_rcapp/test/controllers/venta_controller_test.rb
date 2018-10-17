@@ -17,7 +17,7 @@ class VentaControllerTest < ActionDispatch::IntegrationTest
 
   test "should create ventum" do
     assert_difference('Ventum.count') do
-      post venta_url, params: { ventum: { cantidad: @ventum.cantidad, donacion: @ventum.donacion, fechaventa: @ventum.fechaventa, iddetalleparametro: @ventum.iddetalleparametro, idredencion: @ventum.idredencion, total: @ventum.total, valorunidad: @ventum.valorunidad } }
+      post venta_url, params: { ventum: { cantidad: @ventum.cantidad, comprador: @ventum.comprador, detalleparametros_id: @ventum.detalleparametros_id, donacion: @ventum.donacion, fechaventa: @ventum.fechaventa, redencions_id: @ventum.redencions_id, total: @ventum.total, valorunidad: @ventum.valorunidad } }
     end
 
     assert_redirected_to ventum_url(Ventum.last)
@@ -34,7 +34,7 @@ class VentaControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update ventum" do
-    patch ventum_url(@ventum), params: { ventum: { cantidad: @ventum.cantidad, donacion: @ventum.donacion, fechaventa: @ventum.fechaventa, iddetalleparametro: @ventum.iddetalleparametro, idredencion: @ventum.idredencion, total: @ventum.total, valorunidad: @ventum.valorunidad } }
+    patch ventum_url(@ventum), params: { ventum: { cantidad: @ventum.cantidad, comprador: @ventum.comprador, detalleparametros_id: @ventum.detalleparametros_id, donacion: @ventum.donacion, fechaventa: @ventum.fechaventa, redencions_id: @ventum.redencions_id, total: @ventum.total, valorunidad: @ventum.valorunidad } }
     assert_redirected_to ventum_url(@ventum)
   end
 

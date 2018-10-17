@@ -5,13 +5,17 @@ one:
   ubicaciony: 9.99
   nombre: MyString
   idresponsable: MyString
-  fechainicio: 2018-10-12 16:26:42
-  fechacierre: 2018-10-12 16:26:42
+  fechainicio: 2018-10-13 11:51:31
+  fechacierre: 2018-10-13 11:51:31
+  detalleparametros: one
+  users: one
 
 two:
   ubicacionx: 9.99
   ubicaciony: 9.99
   nombre: MyString
   idresponsable: MyString
-  fechainicio: 2018-10-12 16:26:42
-  fechacierre: 2018-10-12 16:26:42
+  fechainicio: 2018-10-13 11:51:31
+  fechacierre: 2018-10-13 11:51:31
+  detalleparametros: two
+  users: two

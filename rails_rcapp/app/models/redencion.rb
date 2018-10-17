@@ -1,3 +1,3 @@
 class Redencion < ApplicationRecord
-  belongs_to :reto
+  belongs_to :detalleparametros
 end

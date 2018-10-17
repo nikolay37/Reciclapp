@@ -12,16 +12,6 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :iddetalleparametro %>
-    <%= form.number_field :iddetalleparametro %>
-  </div>
-
-  <div class="field">
-    <%= form.label :idredencion %>
-    <%= form.number_field :idredencion %>
-  </div>
-
-  <div class="field">
     <%= form.label :fechaventa %>
     <%= form.datetime_select :fechaventa %>
   </div>
@@ -44,6 +34,21 @@
   <div class="field">
     <%= form.label :donacion %>
     <%= form.text_field :donacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comprador %>
+    <%= form.text_field :comprador %>
+  </div>
+
+  <div class="field">
+    <%= form.label :detalleparametros_id %>
+    <%= form.text_field :detalleparametros_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :redencions_id %>
+    <%= form.text_field :redencions_id %>
   </div>
 
   <div class="actions">

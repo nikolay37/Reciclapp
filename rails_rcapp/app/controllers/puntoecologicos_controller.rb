@@ -69,6 +69,6 @@ class PuntoecologicosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def puntoecologico_params
-      params.require(:puntoecologico).permit(:ubicacionx, :ubicaciony, :nombre, :idresponsable, :fechainicio, :fechacierre)
+      params.require(:puntoecologico).permit(:ubicacionx, :ubicaciony, :nombre, :idresponsable, :fechainicio, :fechacierre, :detalleparametros_id, :users_id)
     end
 end

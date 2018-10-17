@@ -14,8 +14,9 @@ class RetosTest < ApplicationSystemTestCase
     visit retos_url
     click_on "New Reto"
 
-    fill_in "Idusuario Origina", with: @reto.idusuario_origina
     fill_in "Nombre", with: @reto.nombre
+    fill_in "Patrocinadox", with: @reto.patrocinadox
+    fill_in "Users", with: @reto.users_id
     click_on "Create Reto"
 
     assert_text "Reto was successfully created"
@@ -26,8 +27,9 @@ class RetosTest < ApplicationSystemTestCase
     visit retos_url
     click_on "Edit", match: :first
 
-    fill_in "Idusuario Origina", with: @reto.idusuario_origina
     fill_in "Nombre", with: @reto.nombre
+    fill_in "Patrocinadox", with: @reto.patrocinadox
+    fill_in "Users", with: @reto.users_id
     click_on "Update Reto"
 
     assert_text "Reto was successfully updated"

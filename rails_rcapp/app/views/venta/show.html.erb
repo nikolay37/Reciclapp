@@ -1,16 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Iddetalleparametro:</strong>
-  <%= @ventum.iddetalleparametro %>
-</p>
-
-<p>
-  <strong>Idredencion:</strong>
-  <%= @ventum.idredencion %>
-</p>
-
-<p>
   <strong>Fechaventa:</strong>
   <%= @ventum.fechaventa %>
 </p>
@@ -33,6 +23,21 @@
 <p>
   <strong>Donacion:</strong>
   <%= @ventum.donacion %>
+</p>
+
+<p>
+  <strong>Comprador:</strong>
+  <%= @ventum.comprador %>
+</p>
+
+<p>
+  <strong>Detalleparametros:</strong>
+  <%= @ventum.detalleparametros %>
+</p>
+
+<p>
+  <strong>Redencions:</strong>
+  <%= @ventum.redencions %>
 </p>
 
 <%= link_to 'Edit', edit_ventum_path(@ventum) %> |

@@ -15,10 +15,11 @@ class RedencionsTest < ApplicationSystemTestCase
     click_on "New Redencion"
 
     fill_in "Cantidadpremio", with: @redencion.Cantidadpremio
+    fill_in "Detalleparametros", with: @redencion.detalleparametros_id
+    fill_in "Disponible", with: @redencion.disponible
     fill_in "Fecharedencion", with: @redencion.fecharedencion
-    fill_in "Idpremio", with: @redencion.idpremio
     fill_in "Idusuario", with: @redencion.idusuario
-    fill_in "Reto", with: @redencion.reto_id
+    fill_in "Nota", with: @redencion.nota
     click_on "Create Redencion"
 
     assert_text "Redencion was successfully created"
@@ -30,10 +31,11 @@ class RedencionsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Cantidadpremio", with: @redencion.Cantidadpremio
+    fill_in "Detalleparametros", with: @redencion.detalleparametros_id
+    fill_in "Disponible", with: @redencion.disponible
     fill_in "Fecharedencion", with: @redencion.fecharedencion
-    fill_in "Idpremio", with: @redencion.idpremio
     fill_in "Idusuario", with: @redencion.idusuario
-    fill_in "Reto", with: @redencion.reto_id
+    fill_in "Nota", with: @redencion.nota
     click_on "Update Redencion"
 
     assert_text "Redencion was successfully updated"

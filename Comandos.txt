@@ -96,7 +96,7 @@ development:
   host: localhost
   username: postgres
   password: ''
-  database: curso_postgresql
+  database: rcapp
 
 # comando scaffold 
 rails generate scaffold User name:string email:string
@@ -114,36 +114,19 @@ root :to => "pages#show"
 rails g scaffold list name
 rails g scaffold task name list:references
 
-
+# editar gemfile y agregar
 gem 'devise'
-
 gem 'bootstrap', '~> 4.1.3'
-
 
 # Configurar devise
 bundle add devise
 rails generate devise:install
-
-luego de configurar los 4 pasos
-rails generate devise User
-rails db:migrate
-rails s 
-rake routes
-
-
-
-
-config environment developers
-puerto 3000
-
-routes
-root to: "homeindex"
-
-
-app view layaou aplication
-
-
-
+CONFIGURACION 4 PASOS
+1.in config/environments/development.rb    ADD
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+2. en config/routes.rb  add
+root to: "home#index"
+3. abrir app/views/layouts/application.html.erb y arriba de la linea <%= yield %>  colocar 
 
  <% if current_user %>
   <%= current_user.email %>.
@@ -156,6 +139,19 @@ app view layaou aplication
    <%= link_to 'Registrarse', new_user_registration_path %>
  <% end %>
 
+4. correr en consola   rails g devise:views
+5. app/controllers/application_controller.rb
+ before_action :authenticate_user!
+
+luego de configurar los 4 pasos
+rails generate devise User
+rails db:migrate
+rails s 
+rake routes
+
+ADICIONAR CAMPOS A DEVISE
+Crear achivo vacio de migracion
+rails generate migration AddFieldsToUsers
 
 ionic
 npm install -g ionic cordova

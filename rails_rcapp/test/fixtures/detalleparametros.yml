@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  idparametro: 1
   nombre: MyString
-  parametro: one
+  parametros: one
 
 two:
-  idparametro: 1
   nombre: MyString
-  parametro: two
+  parametros: two

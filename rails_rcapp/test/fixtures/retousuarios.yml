@@ -2,10 +2,12 @@
 
 one:
   lema: MyString
-  reto: one
+  nota: MyString
+  retos: one
   users: one
 
 two:
   lema: MyString
-  reto: two
+  nota: MyString
+  retos: two
   users: two

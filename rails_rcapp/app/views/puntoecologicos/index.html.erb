@@ -11,6 +11,8 @@
       <th>Idresponsable</th>
       <th>Fechainicio</th>
       <th>Fechacierre</th>
+      <th>Detalleparametros</th>
+      <th>Users</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -24,6 +26,8 @@
         <td><%= puntoecologico.idresponsable %></td>
         <td><%= puntoecologico.fechainicio %></td>
         <td><%= puntoecologico.fechacierre %></td>
+        <td><%= puntoecologico.detalleparametros %></td>
+        <td><%= puntoecologico.users %></td>
         <td><%= link_to 'Show', puntoecologico %></td>
         <td><%= link_to 'Edit', edit_puntoecologico_path(puntoecologico) %></td>
         <td><%= link_to 'Destroy', puntoecologico, method: :delete, data: { confirm: 'Are you sure?' } %></td>

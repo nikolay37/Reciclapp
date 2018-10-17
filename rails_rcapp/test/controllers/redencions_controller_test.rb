@@ -17,7 +17,7 @@ class RedencionsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create redencion" do
     assert_difference('Redencion.count') do
-      post redencions_url, params: { redencion: { Cantidadpremio: @redencion.Cantidadpremio, fecharedencion: @redencion.fecharedencion, idpremio: @redencion.idpremio, idusuario: @redencion.idusuario, reto_id: @redencion.reto_id } }
+      post redencions_url, params: { redencion: { Cantidadpremio: @redencion.Cantidadpremio, detalleparametros_id: @redencion.detalleparametros_id, disponible: @redencion.disponible, fecharedencion: @redencion.fecharedencion, idusuario: @redencion.idusuario, nota: @redencion.nota } }
     end
 
     assert_redirected_to redencion_url(Redencion.last)
@@ -34,7 +34,7 @@ class RedencionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update redencion" do
-    patch redencion_url(@redencion), params: { redencion: { Cantidadpremio: @redencion.Cantidadpremio, fecharedencion: @redencion.fecharedencion, idpremio: @redencion.idpremio, idusuario: @redencion.idusuario, reto_id: @redencion.reto_id } }
+    patch redencion_url(@redencion), params: { redencion: { Cantidadpremio: @redencion.Cantidadpremio, detalleparametros_id: @redencion.detalleparametros_id, disponible: @redencion.disponible, fecharedencion: @redencion.fecharedencion, idusuario: @redencion.idusuario, nota: @redencion.nota } }
     assert_redirected_to redencion_url(@redencion)
   end
 
