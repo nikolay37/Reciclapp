@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  nombre: 1
+  nombre: MyString
   patrocinadox: MyString
   users: one
 
 two:
-  nombre: 1
+  nombre: MyString
   patrocinadox: MyString
   users: two

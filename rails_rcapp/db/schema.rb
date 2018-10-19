@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_13_185013) do
+ActiveRecord::Schema.define(version: 2018_10_19_195413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 2018_10_13_185013) do
   end
 
   create_table "retos", force: :cascade do |t|
-    t.integer "nombre"
+    t.string "nombre"
     t.string "patrocinadox"
     t.bigint "users_id"
     t.datetime "created_at", null: false
@@ -106,29 +106,24 @@ ActiveRecord::Schema.define(version: 2018_10_13_185013) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "email", default: "", null: false
-    t.string "encrypted_password", default: "", null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "cedula"
     t.string "nombre"
     t.string "apellido"
     t.string "celular"
-    t.string "fechanacimiento"
+    t.string "email"
+    t.datetime "fechanacimiento"
     t.string "direccion"
     t.string "barrio"
     t.string "edificio"
     t.string "genero"
     t.string "empresa"
-    t.string "numeroeaab"
+    t.string "clienteacueducto"
     t.string "jac"
-    t.string "perfil_id"
-    t.string "localidad_id"
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.integer "idperfildetpar"
+    t.integer "idlocalidad"
+    t.string "clave"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "venta", force: :cascade do |t|

@@ -8,9 +8,6 @@ Rails.application.routes.draw do
   resources :parametros
   resources :retousuarios
   resources :retos
-  devise_for :users
+  resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #get 'sign_in' => 'devise/sessions#new'
-  #devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'main#index'
 end

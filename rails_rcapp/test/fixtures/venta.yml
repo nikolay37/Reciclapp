@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  fechaventa: 2018-10-13 13:27:13
+  fechaventa: 2018-10-19 14:54:13
   cantidad: 1
   valorunidad: 1
   total: 1
@@ -11,7 +11,7 @@ one:
   redencions: one
 
 two:
-  fechaventa: 2018-10-13 13:27:13
+  fechaventa: 2018-10-19 14:54:13
   cantidad: 1
   valorunidad: 1
   total: 1
