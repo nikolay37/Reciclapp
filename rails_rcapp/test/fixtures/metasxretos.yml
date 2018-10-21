@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fechaexpiracion: 2018-10-20 17:57:48
+  cantidad: 1
+  nota: MyString
+  retos: one
+  detalleparametros: one
+
+two:
+  fechaexpiracion: 2018-10-20 17:57:48
+  cantidad: 1
+  nota: MyString
+  retos: two
+  detalleparametros: two

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :venta
+  resources :ventaganancia
   resources :puntoecologicos
-  resources :redencions
+  resources :redenciones
   resources :recoleccions
-  resources :meta
+  resources :metasxretos
   resources :detalleparametros
   resources :parametros
   resources :retousuarios

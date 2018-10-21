@@ -1,0 +1,2 @@
+module VentagananciaHelper
+end

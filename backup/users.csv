@@ -1,0 +1,3 @@
+"id","cedula","nombre","apellido","celular","email","fechanacimiento","direccion","barrio","edificio","genero","empresa","clienteacueducto","jac","idperfildetpar","idlocalidad","clave","created_at","updated_at"
+1,"79799041","NIKOLAY","CARDENAS","3193601987","nikolay37@hotmail.com","2018-10-19 20:33:00","Calle 136 bis 101b-19","Costa Azul","","M","Interbolsa","456789","Costa Azul 1",35,18,"12345","2018-10-19 20:35:27.15394","2018-10-19 20:35:27.15394"
+2,"10100","JULIAN","RESTREPO","319360","julianrd19@hotmail.com","2018-10-19 20:46:00","Calle 136 bis 101b-19","Costa Azul","","M","Interbolsa","456789","Costa Azul 1",35,18,"12345","2018-10-19 20:47:52.403743","2018-10-19 20:47:52.403743"

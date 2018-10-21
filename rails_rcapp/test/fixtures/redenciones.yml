@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idusuario: 1
+  fecharedencion: 2018-10-20 18:00:32
+  Cantidadpremio: 1
+  disponible: 1
+  nota: MyString
+  detalleparametros: one
+
+two:
+  idusuario: 1
+  fecharedencion: 2018-10-20 18:00:32
+  Cantidadpremio: 1
+  disponible: 1
+  nota: MyString
+  detalleparametros: two

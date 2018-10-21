@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Metasxretos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fechaexpiracion</th>
+      <th>Cantidad</th>
+      <th>Nota</th>
+      <th>Retos</th>
+      <th>Detalleparametros</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @metasxretos.each do |metasxreto| %>
+      <tr>
+        <td><%= metasxreto.fechaexpiracion %></td>
+        <td><%= metasxreto.cantidad %></td>
+        <td><%= metasxreto.nota %></td>
+        <td><%= metasxreto.retos_id %></td>
+        <td><%= metasxreto.detalleparametros_id %></td>
+        <td><%= link_to 'Show', metasxreto %></td>
+        <td><%= link_to 'Edit', edit_metasxreto_path(metasxreto) %></td>
+        <td><%= link_to 'Destroy', metasxreto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Metasxreto', new_metasxreto_path %>

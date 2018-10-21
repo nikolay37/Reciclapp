@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Redenciones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idusuario</th>
+      <th>Fecharedencion</th>
+      <th>Cantidadpremio</th>
+      <th>Disponible</th>
+      <th>Nota</th>
+      <th>Detalleparametros</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @redenciones.each do |redencione| %>
+      <tr>
+        <td><%= redencione.idusuario %></td>
+        <td><%= redencione.fecharedencion %></td>
+        <td><%= redencione.Cantidadpremio %></td>
+        <td><%= redencione.disponible %></td>
+        <td><%= redencione.nota %></td>
+        <td><%= redencione.detalleparametros %></td>
+        <td><%= link_to 'Show', redencione %></td>
+        <td><%= link_to 'Edit', edit_redencione_path(redencione) %></td>
+        <td><%= link_to 'Destroy', redencione, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Redencione', new_redencione_path %>

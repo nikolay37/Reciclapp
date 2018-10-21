@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_19_195413) do
+ActiveRecord::Schema.define(version: 2018_10_20_230211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_10_19_195413) do
     t.index ["parametros_id"], name: "index_detalleparametros_on_parametros_id"
   end
 
-  create_table "meta", force: :cascade do |t|
+  create_table "metasxretos", force: :cascade do |t|
     t.datetime "fechaexpiracion"
     t.integer "cantidad"
     t.string "nota"
@@ -31,8 +31,8 @@ ActiveRecord::Schema.define(version: 2018_10_19_195413) do
     t.bigint "detalleparametros_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["detalleparametros_id"], name: "index_meta_on_detalleparametros_id"
-    t.index ["retos_id"], name: "index_meta_on_retos_id"
+    t.index ["detalleparametros_id"], name: "index_metasxretos_on_detalleparametros_id"
+    t.index ["retos_id"], name: "index_metasxretos_on_retos_id"
   end
 
   create_table "parametros", force: :cascade do |t|
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 2018_10_19_195413) do
     t.index ["retousuarios_id"], name: "index_recoleccions_on_retousuarios_id"
   end
 
-  create_table "redencions", force: :cascade do |t|
+  create_table "redenciones", force: :cascade do |t|
     t.integer "idusuario"
     t.datetime "fecharedencion"
     t.integer "Cantidadpremio"
@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2018_10_19_195413) do
     t.bigint "detalleparametros_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["detalleparametros_id"], name: "index_redencions_on_detalleparametros_id"
+    t.index ["detalleparametros_id"], name: "index_redenciones_on_detalleparametros_id"
   end
 
   create_table "retos", force: :cascade do |t|
@@ -126,7 +126,7 @@ ActiveRecord::Schema.define(version: 2018_10_19_195413) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "venta", force: :cascade do |t|
+  create_table "ventaganancia", force: :cascade do |t|
     t.datetime "fechaventa"
     t.integer "cantidad"
     t.integer "valorunidad"
@@ -134,24 +134,24 @@ ActiveRecord::Schema.define(version: 2018_10_19_195413) do
     t.string "donacion"
     t.string "comprador"
     t.bigint "detalleparametros_id"
-    t.bigint "redencions_id"
+    t.bigint "redenciones_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["detalleparametros_id"], name: "index_venta_on_detalleparametros_id"
-    t.index ["redencions_id"], name: "index_venta_on_redencions_id"
+    t.index ["detalleparametros_id"], name: "index_ventaganancia_on_detalleparametros_id"
+    t.index ["redenciones_id"], name: "index_ventaganancia_on_redenciones_id"
   end
 
   add_foreign_key "detalleparametros", "parametros", column: "parametros_id"
-  add_foreign_key "meta", "detalleparametros", column: "detalleparametros_id"
-  add_foreign_key "meta", "retos", column: "retos_id"
+  add_foreign_key "metasxretos", "detalleparametros", column: "detalleparametros_id"
+  add_foreign_key "metasxretos", "retos", column: "retos_id"
   add_foreign_key "puntoecologicos", "detalleparametros", column: "detalleparametros_id"
   add_foreign_key "puntoecologicos", "users", column: "users_id"
   add_foreign_key "recoleccions", "detalleparametros", column: "detalleparametros_id"
   add_foreign_key "recoleccions", "retousuarios", column: "retousuarios_id"
-  add_foreign_key "redencions", "detalleparametros", column: "detalleparametros_id"
+  add_foreign_key "redenciones", "detalleparametros", column: "detalleparametros_id"
   add_foreign_key "retos", "users", column: "users_id"
   add_foreign_key "retousuarios", "retos", column: "retos_id"
   add_foreign_key "retousuarios", "users", column: "users_id"
-  add_foreign_key "venta", "detalleparametros", column: "detalleparametros_id"
-  add_foreign_key "venta", "redencions", column: "redencions_id"
+  add_foreign_key "ventaganancia", "detalleparametros", column: "detalleparametros_id"
+  add_foreign_key "ventaganancia", "redenciones", column: "redenciones_id"
 end
